@@ -4,8 +4,13 @@
 
 <p align="center"> What are the main factors influencing Airbnb prices in London? </p>
 
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Executive summary focusing a very brief outline of:
+## Motivation
+## Data
+## Methodology
+## Results
+## Conclusion
+## Appendix
 
 ```markdown
 Syntax highlighted code block
