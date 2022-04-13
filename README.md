@@ -1,8 +1,8 @@
-# Airbnb Data Science Project
+
 
 ## Our focus Problem
 
-What are the main factors influencing Airbnb prices in London?
+<p align="center"> What are the main factors influencing Airbnb prices in London? </p>
 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
