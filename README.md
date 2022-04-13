@@ -1,6 +1,6 @@
 ## Our focus problem
 
-                                       What are the factors influencing Airbnb prices in London?
+                                     What are the factors influencing Airbnb prices in London?
 
 
 ### Markdown
