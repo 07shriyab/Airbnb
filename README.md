@@ -4,7 +4,7 @@
 
 <p align="center"> What are the main factors influencing Airbnb prices in London? </p>
 
-## Executive summary focusing a very brief outline of:
+## Executive summary 
 ## Motivation
 ## Data
 ## Methodology
