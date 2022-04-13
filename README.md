@@ -1,4 +1,4 @@
-## Our focus problem
+## Airbnb Data Science Project
 
                                      What are the factors influencing Airbnb prices in London?
 
