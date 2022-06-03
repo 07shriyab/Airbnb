@@ -15,7 +15,7 @@ Airbnb has become a disruptor in the market for property rentals thus and has th
 
 
 ## Conclusion
-For the comments section, it is part of a business person to investigate this because it is common for consumers to check out the positive/ negative reviews. If there are more negative comments about the Airbnb rental, this will scare the consumers away. Evidence shows that “for customers, online is revealed to be an essential information source of decision making (Shengli and Fan, 2019 ), and almost 95% of travellers read the online reviews before purchasing a travel product (Ady and Quadri-Felitti, 2015)”. 
+For the comments section, it is part of a business person to investigate this because it is common for consumers to check out the positive/ negative reviews. If there are more negative comments about the Airbnb rental, this will scare the consumers away. Evidence shows that “for customers, online is revealed to be an essential information source of decision making (Shengli and Fan, 2019), and almost 95% of travellers read the online reviews before purchasing a travel product (Ady and Quadri-Felitti, 2015)”. 
 
 For further works on predicting prices using machine learning, explore more models such as XGB Booster, GradientBoostingRegressor, and  “conduct a more exhaustive parameter tuning” on how to do reduce the errors of the outliers and what they represent. 
 
