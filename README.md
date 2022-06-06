@@ -1,5 +1,5 @@
 
-![](Screenshot-2022-04-13-at-11.55.28.jpg)
+![](images/image10.jpg)
 ## Our focus Problem
 
 <p align="center"> What are the most signifcant factors influencing Airbnb prices in London? </p>
