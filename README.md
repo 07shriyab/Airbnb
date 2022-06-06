@@ -1,4 +1,4 @@
-# Exploring the Hactors that Affect Airbnb Prices in London 
+# Exploring the Factors that Affect Airbnb Prices in London 
 
 ## Focus Problem
 
