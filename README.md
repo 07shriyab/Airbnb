@@ -1,7 +1,8 @@
 
-![](images/image10.jpg)
 ## Our focus Problem
 
+
+![](images/image10.jpg)
 <p align="center"> What are the most signifcant factors influencing Airbnb prices in London? </p>
 
 ## Executive Summary 
