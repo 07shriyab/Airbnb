@@ -68,7 +68,7 @@ COVID-19 created a significant setback to listings and revenues so we decided it
 
 ## Getting Our Data
 
-![](insideairbnbgettingdata.png)
+![](Images/insideairbnbgettingdata.png)
 
 Initially we did face some challenges with finding a suitable dataset as sources such as Kaggle did not provide us with comprehensive enough information and missed out crucial points such as amenities.
 
@@ -80,31 +80,31 @@ We used 2 datasets shown below. The screenshots show a randomly selected sample 
 
 This dataset contains information about Airbnb listings, including neighbourhood, property type and so on. There are 66000 rows and 74 columns. These columns were the factors we analysed against median prices. 
 
-![](wholelistingscsv.png)
+![](Images/wholelistingscsv.png)
 
 2. Reviews.csv
 
 This dataset contains written comments by guests about their experiences in a particular Airbnb. There are over 1 million rows of reviews, with some listings (given by listing_id) having multiple reviews. 
 
-![](wholereviewscsv.png)
+![](Images/wholereviewscsv.png)
 
 Sample of a negative review: (polarity score < 0):
 
-![](negativecommentpolarity.png)
+![](Images/negativecommentpolarity.png)
 
-![](negativecomment.png)
+![](Images/negativecomment.png)
 
 Sample of a neutral review (polarity score = 0):
 
-![](neutralcommentpolarity.png)
+![](Images/neutralcommentpolarity.png)
 
-![](neutralreview.png)
+![](Images/neutralreview.png)
 
 Sample of a positive review (polarity score > 0):
 
-![](positivecommentpolarity.png)
+![](Images/positivecommentpolarity.png)
 
-![](postivecomment.png)
+![](Images/postivecomment.png)
 
 ### Obtaining Data
 
@@ -113,10 +113,10 @@ In order to conduct our analysis and visualisations from our data we used Python
 First 5 rows of the formatted dataframe in Jupyter notebook (df.head(n=5)): 
 
 Listings
-![](listingscsv.png)
+![](Images/listingscsv.png)
 
 Reviews
-![](obtainingreviewsdata.png)
+![](Images/obtainingreviewsdata.png)
 
 ### Limitaitons of Dataset
 
@@ -124,7 +124,7 @@ Reviews
 2. In terms of limitations of our analysis, the data is based on advertised/sticker prices rather than what is actually paid so this slightly affected our results. There were some extreme values of prices that had an impact on some calculations and visualisations therefore we decided to use median prices instead of mean prices to limit the effect of outliers.
 
 Example of outlier:
-![](priceoutlier.png)
+![](Images/priceoutlier.png)
 
 3. The sheer number of reviews (over a million) poses a technical shortcoming as it would be too difficult to conduct sentiment analysis on all of these. As a result of this, our analysis does not include all of the comments but instead a random sample of the top comments that were included in the most expensive listings. 
 4. Furthermore, there is great subjectivity to what makes a positive or negative review. To combat this we used Textblob sentiment to create polarity scores for the reviews. A score greater than 0 indicated a positive review and a score less than 0 was taken to be a negative review. 
@@ -165,7 +165,7 @@ For the amenities, the data was cleaned by removing the NaN values and then the 
 
 Then, we grouped each amenity into a certain category, if they have the same words/meaning but are in different letter cases or words. Here is a screenshot of the process:
 
-![](pythonforgroupingamenities.png)
+![](Images/pythonforgroupingamenities.png)
 
 Then, we used the train_test split model(70:30 split) and accuracy scores to calculate the Feature Importance using Decision Tree and Random Forest classifier, which are available in the “scikit-learn” library of the python-based open source data analytics platform and the plots were created using Matplotlib.
 
@@ -193,13 +193,13 @@ Some Airbnbs also had additional service or cleaning fees which we realised coul
 
 **1. Distribution of Median Prices**
 
-![](distributionofmedianprices.png)
+![](Images/distributionofmedianprices.png)
 
 Just to give a general picture of the prices of the Airbnb listings in the dataset, we plotted a graph to demonstrate the distribution. The vertical dotted line indicates the median price of all the listings (£85), which seems reasonable, and the distribution is skewed to the right with prices mostly under £200 a night. This is useful to us in the analysis of factors against price, as we were able to determine whether the results were more similar or different to what was expected and whether they were reasonable, especially given the fact that outliers sometimes altered results. 
 
 **2. Heat Map**
 
-![](heatmapcorrelation.png)
+![](Images/heatmapcorrelation.png)
 
 We plotted a heat map which we hoped would give us a general overview or indication of which factors affect prices the most, and found that the top few included the number of people it accommodates, bedrooms, beds and the total of host listings. The top 3, however, were expected as undoubtedly the price of an Airbnb for 5 people would normally be more expensive than that for 1 as it would be bigger, have more bedrooms and so on. Hence, we can also see strong positive correlations between accommodates, bedrooms and beds. A limitation of this is that it included factors with numerical values.
 
@@ -207,7 +207,7 @@ We plotted a heat map which we hoped would give us a general overview or indicat
 
 **1. Is the host a superhost?**
 
-![](hostissuperhost.png)
+![](Images/hostissuperhost.png)
 
 This was a surprising result. Being an Airbnb consumer ourselves, we tend to look at whether the host is a superhost or not before making a final decision. However, based on the graphs, we can see that being a superhost does not actually have a positive effect on the prices of the Airbnb listings, but instead has a negative one.
 
