@@ -1,1 +1,16 @@
-theme: jekyll-theme-cayman
+title: Exploring the factors that affect Airbnb prices in London
+desciption: Done by Shriya, Erika and Joelle
+show_dowloads: true
+theme: 07shriyab/pages-themes-cayman
+darkmode: false
+hide_first_title: false
+color:
+  header: "#fff"
+  gradient_left: "#000"
+  gradient_right: "#e53935"
+buttons:
+  zip_url: https://github.com/07shriyab/pages-themes-cayman
+  zip_title: View Github
+  zip_hide: false
+  tar_hide: true
+  
