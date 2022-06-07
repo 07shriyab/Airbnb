@@ -429,7 +429,7 @@ Overall, names of properties(textual data) and sentiment analysis of the comment
 **Overall Feature Importance of Selected Factors**
 
 ![](Images/overallfeatureimportancedecisiontree.png)
-![](Images/
+![](Images/overallfeatureimportancerandomforest.png)
 
 These graphs were plotted using different modules - the Decision Tree Classifier (left) and Random Forest Regression (right). The decision tree, however, tends to overfit data and thus we found that the random forest model was more accurate because it chooses features randomly during the training process. This model, which produced the graph on the right, suggests that the total number of listings per host was the most important factor. This could be because more experienced hosts know the market better and are able to adopt a more appropriate pricing strategy. It is almost given that factors like the number of bedrooms, bathrooms, beds and guests accommodated were close to the top in terms of importance, but what was slightly surprising was that review scores did not seem to matter as much as we expected. This suggests that…
 
