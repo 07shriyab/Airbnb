@@ -9,6 +9,7 @@
 ## Executive Summary 
 
 Having reported more than 100 million bookings in the first quarter of 2022, the Airbnb business has resurged from the pandemic and is booming. ‘Air Bed and Breakfast’ or Airbnb is essentially an online marketplace whereby those who wish to rent out their property are connected to people who are searching for accommodation when visiting that location. Airbnb has over 5.6 million listings across 220 countries globally and 100,000 locations. Some of its main competitors include Booking.com, TUI and Tripadvisor. 
+
 Living in London ourselves, the key question we wanted to consider is what causes the prices of the hundreds of listings in London to fluctuate.
 
 
@@ -252,6 +253,181 @@ We used a map to illustrate the number of Airbnb listings according to neighbour
 This bar plot shows us to identify that the top 4 boroughs with the highest median prices of Airbnb listings are Kensington and Chelsea, City of London, Westminster and Camden. This was slightly different from the graph I plotted before the prices were limited, but the top 5 most expensive neighbourhoods are still the same, just in a different order. Using the map from Zoopla (which allowed us to look at the names of boroughs), the top 4 were Kensington and Chelsea, Westminster, Hammersmith and Fulham and Camden. This was almost the same as what we found, suggesting that Airbnb prices are generally consistent with the trends in for-sale property prices.
 
 The data we found suggests that there is likely to be displacement for communities in the priciest neighbourhoods, especially given the fact that the number of Airbnb listings in London has increased 571%. This is known as tourism gentrification, where tourists displace residents from their local communities through increases in rental prices and decreased housing availability, making it difficult for people to find an affordable home to rent in their local neighbourhood. 
+
+**7. Property Type**
+
+![](Images/amountofdifferentpropertytype.png)
+![](Images/propertytypemedianprice.png)
+
+This simply shows the number of each listing. Since we have 85 unique property types, we decided to group them as 'Freestanding', 'Attached', ‘Luxury’ and 'Other'. This was based on our own judgement of which category we thought fit the property most appropriately. The categories were decided in this manner:
+
+- Freestanding - properties with a freestanding house and land immediately around it (privacy)
+   - Includes: townhouse, residential home, bungalow, cottage
+
+- Attached - properties connected to larger complexes with multiple units
+   - Includes: condominium, hostel, hotel, guest house
+
+- Luxury - higher-end properties (e.g. a splurge as part of a destination wedding or other event)
+   - Includes: villa, chalet, vacation home
+
+- Other - unique properties that fit into none of the above categories
+   - Includes: boat, barn
+
+We expected luxury properties to have the highest median price, but it was surprising that it was the lowest. This could have been affected by the location, or by the small sample size which may have had extreme values (especially because we did not differentiate between an entire place and a shared room when plotting these graphs) and fluctuations that caused the median to be lower.
+
+For example, we found that townhouses are more expensive than villas, with an entire townhouse costing around £1183 per night, while a unique villa costs around £773 per night as shown in our Airbnb website investigation.
+
+**8. Room Type**
+
+![](Images/numberofroomtypes.png)
+![](Images/effectofroomtypeonprice.png)
+
+We replaced hotel rooms with private rooms, since there are only 3 types of rooms shown on the Airbnb website. These results were consistent with what we expected, as entire homes or apartments are significantly more expensive than single rooms. 
+
+**9. Beds and Bedrooms**
+
+![](Images/bedsvsmedianprice.png)
+![](Images/barchartnumberofbedroomsvslistingsprice.png)
+
+The graphs clearly show that initially, the median price increases with the number of beds and bedrooms. However, after a certain point, the trend breaks off. This could be due to the fact that Airbnbs with more bedrooms (possibly above 8) were dormitories, which are bound to be cheaper per person and ultimately have lower prices than listings with fewer bedrooms and that might be chalets or villas. We realised that we could not analyse the effect of the number of beds/bedrooms individually, but that these were also linked to the property type.
+
+![](Images/bedin15bedmixedroomairbnbwebsite.png)
+![](Images/8Bedroomboutique.png)
+
+Despite the fact that there is no constant trend, our results still can still give guests a rough idea of the approximate price of Airbnbs with a certain number of bedrooms and beds. For instance, a 15-bed shared room in a hostel would cost about £26.50 a night, while an 8 bedroom villa with 11 beds would be £900. Therefore, our initial expectations were too simple and hence inaccurate because we did not consider the external effects of property type or amenities.
+
+The distributions are skewed to the left and they are not well distributed as there are fluctuations within small amounts. For example, the price drops from around £400 to £300 per night for 9 to 10 bedrooms before skyrocketing back to $1000 per night for a place with 11 bathrooms in London.
+
+**10. Bathrooms**
+
+![](Images/listingspricebybathroomcountwithoutlineofbestfit.png)
+![](Images/listingspricesbybathroomcountwithlineofbestfit.png)
+
+As the number of bathrooms ranged from 0 to 165, we chose a scatter plot instead of the same bar chart used for the graphs of beds or bedrooms against price. The results and line of best fit show that there is no clear trend between the number of bathrooms and price, which suggests that this might not be one of the main factors that hosts should focus on when setting their listing price. However, our results were also affected by the fact that there were fewer than 5 listings with certain bathrooms, such as 75, 105, 125 and so on, and this could have lowered the accuracy. This is evidenced by the fact that the points that show a median price of £1000 (the maximum) are for 10, 17, and 65 bathrooms, all of which only have one listing each.
+
+Given that the number of bathrooms in an Airbnb is dependent on the number of guests it accommodates, beds as well as the size of the property, these factors could be confounding variables that affect the prices, rather than simply the bathroom count. 
+
+**11. Availability 365**
+
+![](Images/availability365.png)
+
+We found no trend from the data, and the only observation we made was that the Airbnbs available for 0 out of the next 365 days have the lowest mean price. This was surprising as we expected that fully booked Airbnbs would have higher demand and thus a higher price. However, we did realise that these prices are a snapshot in time, and thus the fact that they were not available at the point of data collection could have affected the median price.
+
+**12. Minimum Nights**
+
+![](Images/minimumnumberofnightsvsmedianpricewithoutlier.png)
+![](Images/listingspricesbyminimumnightswithoutoutliers.png)
+
+Since we were unable to see a trend from the first graph (left), we decided to remove the outliers, not with the intention of manipulating our results, but simply to compare the difference and see if we could observe a clearer pattern of the points in a cluster. However, there still was not much correlation between the minimum number of nights a customer needs to stay in an Airbnb and the listing price, which means that hosts do not need to focus on choosing their price based on this factor. 
+
+**13. Amenities**
+
+We could not quite determine how the prices changed according to which amenities the Airbnb included (i.e. whether their presence caused prices to increase or decrease), but we did find out the amenities that affected prices the most.
+
+The train/validation/test split was used because the listing.csv is a large data set. Using the train_size of 0.7 and random state of 42 for both Decision Tree and Random Forest models. 
+
+![](Images/snapshotoftraintestsplitamenities.png)
+
+The amenities were set as nominal variables in which a column is made for each of the categorical values. Then the binary value is inserted signifying whether that entry has a categorical value or not. If the entry had the categorical value, 1 is entered and 0 otherwise. 
+
+![](Images/amenitiesincolumns.png)
+
+Amenities were stored as one big block of text in each row. In order to figure out what the various options were and which listings had them. So, we made the comments into a string and cleaned the text by removing any unnecessary characters. Therefore, create a set of the resultant list which was able to find the feature importance on price. 
+
+In the Decision model, we can see that the top amenities that have high feature importance when setting the prices are parking, white goods (which consists of fridges, washing machines etc), tv, coffee machine, long-stays and cooking basics (which consists of stoves, oven), and others are shown in the bar chart. The other amenities features which were more infrequently mentioned were removed, as it would have been harder to analyse the importance of amenities that appear very few times.  From the 2020 publication of the most filtered amenities, we found that free parking, a kitchen, and internet are important. This shows that the data in listing.csv have some validity in mirroring the popular amenities among consumers, even though it is old data from a few years back (Airbnb, 2020).
+
+Using the Random Forest Regression, the top amenities are white goods, parking, and bed linen, tv.  It seems that they have a good prediction of what guests are looking for. 
+
+From the below graphs, we can infer that the parking and white goods are the most important features for listing. This is helpful for the hosts when bidding their prices or selling out their properties to take into consideration what they already have.  
+
+In London, new hosts should note that they may be able to increase their listing price if the property includes parking spaces and white goods to attract more guests who demand such amenities. 
+
+![](Images/amenitiesdecisiontree.png)
+![](Images/amenitiesrandomforest.png)
+
+We can see that the listings with the highest prices have amenities such as Wifi, Smoke alarm, Essentials, Heating, Long term stay allowed. So, an aspiring Airbnb host ensures his property contains these amenities so that he can charge a higher price. Similarly, if a traveller doesn’t require any of these amenities, he can opt for a listing without them to save cost. Amenities and their influence on the price will be explored future in-depth in the machine learning section of the project.
+
+Using the NumPy concatenate, the top 20 amenities were counted and the results showed that wifi, smoke alarms and essentials in properties are more popular among the hosts. Compared to the previous data, it showed that parking space and white_space are the most important, which means that the host should invest in those amenities to be profitable.
+
+Though, with limited data, wifi could be more important than the machine learning analysis on which amenities are important. The reason why wifi may be provided more is that it is super important for the guests. So, the comparison may be invalid in this case. To support my point, we see that Wi-Fi is not part of the top 5 amenities from the feature importance. That is because almost all homes have Wi-Fi/internet nowadays! It was expected that WiFi would not affect the prices significantly.
+
+Overall, amenities, such as Wifi and parking spaces, does affect price, as shown in our findings. Therefore, these amenities should be considered by the hosts when posting their rental properties in Airbnb.
+
+![](Images/barcharttop20amenities.png)
+
+**Sub Problem 2: Do reviews actually matter?**
+
+![](Images/scatterplotofreviewsratingsvsprice.png)
+
+It is viewed that a higher overall review score (5) is given to the most properties that are less than $400 (around £300). This shows that the overall review score is not positively correlated with prices. Also, there are some expensive listings with low review ratings.
+
+This links to the feature importance on price as  review_score_rating  are not as important in predicting prices. Overall, there’s no correlation between the review_score_rating and the prices. This means that cheaper listings can have either absolute best services or the worst services than the expensive listings (which seem to have a somewhat better review score from $400). This means that there could be other aspects of the Airbnb rentals that lead to the score rating. This is where analysing comments becomes important to find the reasoning behind the review score rating.
+
+![](Images/reviewspermonthvsprice.png)
+![](Images/scatterplotofreviewsratingsvsprice.png)
+
+We can see that most reviews range from 0 to 5 reviews per month across all prices. However, the data shows the number of reviews across any month. It has been evidently seen that at $175, there are 25 reviews per month which are the highest compared to other prices. This shows that reviews are important when setting prices because they will lead to more attractions as the customers have a better understanding of how the properties and the stay are.
+
+The reviews per month are more situated around the prices below $10000. This means that the reviews_per_month may be requested more by the hosts/owners to boost their popularity or reduce seeking guests’ suspicions. This is because they may be more convinced to book the apartment if they read about the experiences of the previous guest and do not fully associate  the low price with a low-quality property.
+
+**Sentiment Analysis**
+
+In the comments, which is a free form text column in the reviews.csv, there were instances where these values are not strictly in English only.
+
+However, we didn’t adjust it and looked more at the English comments as this language barrier was just a minor issue. The NLTK is a go-to package in Python to obtain a numerical sentiment value of positive, negative and compound(combined) of any given English text. 
+
+![](Images/sentimentanalysistextblobdataframe.png)
+
+The comments from above for each listing were analysed using Textblob sentiment analysis models. This method assigns a score between -1 and 1 to each review and the scores are averaged across each listing.
+
+This is the first 10000 comments that were analysed. We can see that there are more positive comments as demonstrated below. 
+
+![](Images/sentimentanalysisvaluecounts,png)
+
+Importance of text sentiment polarity:
+- When people are searching for a place, many choose to look at the comments and look at the average scores. For the sentiment classification, TextBlob included giving sentiment scores. Based on the polarity of the general score, a listing can go from -1 (absolute negative sentiment) to 0 (absolute natural sentiment), to 1(absolute positive sentiment). This is important for a host when deciding to write a summary about a listing to customers. Many hosts use more positive language, while others are neutral.
+- However, some don't give a full picture and are hard to read, which are “made” and “would” as shown in the WordCloud of the top words in the comments. The fact that “great” appears in several comments, means that the properties in London have wonderful hosts. For example, there are some comments which contain “sad” but with human analysis, it turns out to be a positive comment. Therefore, TextBlob is not perfect in sentiment analysis. 
+
+**Names of the Property compared to Prices**
+
+Both attributes, names and comments are free-form text. The name is the title of the property the host provided, while comments are left by the guests that have stayed in them.
+
+“Name” is found in listing.csv and  comments can be found in reviews.csv.
+
+Created a dataset and WordCloud of the top 100 most expensive listings: 
+
+
+![](Images/dataframeofnameexpensivelistings.png)
+![](Images/wordcloudnameexpensivelistings.png)
+
+Created a dataset and WordCloud of the top 100 cheapest listings:
+
+![](Images/dataframenamecheapestlistings.png)
+![](Images/cloudcheapestlisting.png)
+
+Here we have seen the most common words in the summary of the cheapest listings. As it can be seen from WordCloud, indeed there are overlapping words with the most expensive listings. Words like: 'bedroom', 'family', and 'flat' appear frequently in both. So they do not tell us anything special. However, words like: 'apartment', 'near' & 'central' appear more frequently in inexpensive listings as opposed to cheaper listings. Indeed,  it turns out that there are certain words which appear more frequently among expensive listings.
+
+**Comments without price comparison**
+
+Using the Nltk CountVectorizer(), the top 10 common words in the comments are shown below: 
+
+![](Images/dataframeoftop10wordsincomments.png)
+![](Images/wordcloudcomments.png)
+
+This word cloud shows the most frequently used words in the comments. We can see that ``great”, location”, clean”, place”, and “recommend” are mostly featured in the comments.  The host is definitely one of the most valuable aspects, essentially for his/her availability, help and welcome. This is what guests are looking for when booking a rental. However, it is difficult to understand the actual context of each review as it could be given with a negative token,  such as “not” e.g “not great”.
+
+Furthermore,  it doesn't help to explain how it relates to prices. However, it does give an idea to the hosts of what people are commenting on AirBnB nowadays and may use it to describe their properties. This allows us to see how hosts are naming their property, and what words the guests  can expect to see in the comments section when browsing for an Airbnb. 
+
+Overall, names of properties(textual data) and sentiment analysis of the comments does affect price.
+
+**Overall eature Importance of Selected Factors**
+
+
+![](Images/
+![](Images/
+
+
+
 
 
 
