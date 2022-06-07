@@ -228,6 +228,7 @@ The trends in prices of these three (true vs false) factors were correlated with
 **4. Total number of listings per host**
 
 ![](Images/totallistingsperhostvsprice.png)
+
 <img src="Images/totallistingsperhostvspricewithlineofbestfit.png" width="500" height="387" >
 
 The graph on the left depicts the change in median price when the number of total listings each host has increases, after outliers were removed. The graph on the left shows a similar graph with a different scale and a regression line of best fit plotted with seaborn. 
@@ -256,6 +257,7 @@ The data we found suggests that there is likely to be displacement for communiti
 **7. Property Type**
 
 <img src="Images/amountofdifferentpropertytype.png" width="392" height="282">
+
 ![](Images/propertytypemedianprice.png)
 
 This simply shows the number of each listing. Since we have 85 unique property types, we decided to group them as 'Freestanding', 'Attached', ‘Luxury’ and 'Other'. This was based on our own judgement of which category we thought fit the property most appropriately. The categories were decided in this manner:
@@ -279,6 +281,7 @@ For example, we found that townhouses are more expensive than villas, with an en
 **8. Room Type**
 
 <img src="Images/numberofroomtypes.png" width="392" height="282">
+
 ![](Images/effectofroomtypeonprice.png)
 
 We replaced hotel rooms with private rooms, since there are only 3 types of rooms shown on the Airbnb website. These results were consistent with what we expected, as entire homes or apartments are significantly more expensive than single rooms. 
@@ -286,11 +289,13 @@ We replaced hotel rooms with private rooms, since there are only 3 types of room
 **9. Beds and Bedrooms**
 
 <img src="Images/bedsvsmedianprice.png" width="507" height="387">
+
 ![](Images/barchartnumberofbedroomsvslistingsprice.png)
 
 The graphs clearly show that initially, the median price increases with the number of beds and bedrooms. However, after a certain point, the trend breaks off. This could be due to the fact that Airbnbs with more bedrooms (possibly above 8) were dormitories, which are bound to be cheaper per person and ultimately have lower prices than listings with fewer bedrooms and that might be chalets or villas. We realised that we could not analyse the effect of the number of beds/bedrooms individually, but that these were also linked to the property type.
 
 ![](Images/bedin15bedmixedroomairbnbwebsite.png)
+
 ![](Images/8Bedroomboutique.png)
 
 Despite the fact that there is no constant trend, our results still can still give guests a rough idea of the approximate price of Airbnbs with a certain number of bedrooms and beds. For instance, a 15-bed shared room in a hostel would cost about £26.50 a night, while an 8 bedroom villa with 11 beds would be £900. Therefore, our initial expectations were too simple and hence inaccurate because we did not consider the external effects of property type or amenities.
@@ -300,6 +305,7 @@ The distributions are skewed to the left and they are not well distributed as th
 **10. Bathrooms**
 
 ![](Images/listingspricebybathroomcountwithoutlineofbestfit.png)
+
 <img src="Images/listingspricesbybathroomcountwithlineofbestfit.png" width="507" height="387">
 
 As the number of bathrooms ranged from 0 to 165, we chose a scatter plot instead of the same bar chart used for the graphs of beds or bedrooms against price. The results and line of best fit show that there is no clear trend between the number of bathrooms and price, which suggests that this might not be one of the main factors that hosts should focus on when setting their listing price. However, our results were also affected by the fact that there were fewer than 5 listings with certain bathrooms, such as 75, 105, 125 and so on, and this could have lowered the accuracy. This is evidenced by the fact that the points that show a median price of £1000 (the maximum) are for 10, 17, and 65 bathrooms, all of which only have one listing each.
@@ -411,6 +417,7 @@ Here we have seen the most common words in the summary of the cheapest listings.
 Using the Nltk CountVectorizer(), the top 10 common words in the comments are shown below: 
 
 <img src="Images/dataframeoftop10wordsincomments.png" width="264">
+
 ![](Images/wordcloudcomments.png)
 
 This word cloud shows the most frequently used words in the comments. We can see that ``great”, location”, clean”, place”, and “recommend” are mostly featured in the comments.  The host is definitely one of the most valuable aspects, essentially for his/her availability, help and welcome. This is what guests are looking for when booking a rental. However, it is difficult to understand the actual context of each review as it could be given with a negative token,  such as “not” e.g “not great”.
