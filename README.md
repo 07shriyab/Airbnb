@@ -227,6 +227,7 @@ The trends in prices of these three (true vs false) factors were correlated with
 **4. Total number of listings per host**
 
 ![](Images/totallistingsperhostvsprice.png)
+<img src="Images/totallistingsperhostvspricewithlineofbestfit.png" width="500" height="387" >
 ![](Images/totallistingsperhostvspricewithlineofbestfit.png)
 
 The graph on the left depicts the change in median price when the number of total listings each host has increases, after outliers were removed. The graph on the left shows a similar graph with a different scale and a regression line of best fit plotted with seaborn. 
