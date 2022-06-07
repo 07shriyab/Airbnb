@@ -428,10 +428,9 @@ Overall, names of properties(textual data) and sentiment analysis of the comment
 
 **Overall Feature Importance of Selected Factors**
 
-![](Images/overallfeatureimportancedecisiontree.png)
-![](Images/overallfeatureimportancerandomforest.png)
+![](Images/overallfeatureimportance.png)
 
-These graphs were plotted using different modules - the Decision Tree Classifier (left) and Random Forest Regression (right). The decision tree, however, tends to overfit data and thus we found that the random forest model was more accurate because it chooses features randomly during the training process. This model, which produced the graph on the right, suggests that the total number of listings per host was the most important factor. This could be because more experienced hosts know the market better and are able to adopt a more appropriate pricing strategy. It is almost given that factors like the number of bedrooms, bathrooms, beds and guests accommodated were close to the top in terms of importance, but what was slightly surprising was that review scores did not seem to matter as much as we expected. This suggests that…
+These graphs were plotted using different modules - the Decision Tree Classifier (left) and Random Forest Regression (right). The decision tree, however, tends to overfit data and thus we found that the random forest model was more accurate because it chooses features randomly during the training process. This model, which produced the graph on the right, suggests that the total number of listings per host was the most important factor. This could be because more experienced hosts know the market better and are able to adopt a more appropriate pricing strategy. It is almost given that factors like the number of bedrooms, bathrooms, beds and guests accommodated were close to the top in terms of importance, but what was slightly surprising was that review scores did not seem to matter as much as we expected. A different project that conducted a similar investigation found that review scores for things like location, cleanliness and so on made up several of the top 10 most influential attributes on price per person, but it is possible that our results are the way they are because most of the listings have similar ratings of 4-5 stars, despite the large range of prices, which means that other factors could play larger roles.
 
 A limitation of the feature importance graphs (as well as the heat map) is that it was plotted only with factors that had numerical (integer/float) values, and thus did not incorporate amenities, location, property or room type. Furthermore, despite the fact that certain factors were found to be of highest importance in determining price, our individual analysis of them shows that the correlations were still not very strong. 
 
@@ -544,6 +543,7 @@ Linear regression and machine learning to predict prices had some selection bias
 - [Oluwalana, A. (2022). Zoopla property heatmap shows the average house price in every London borough. MyLondon. Retrieved June 5, 2022. Available online](https://www.mylondon.news/news/property/zoopla-property-heatmap-shows-average-23950169)
 - Shengli, L., and Fan, L. (2019). The interaction effects of online reviews and free samples on consumers' downloads: an empirical analysis. Inf. Process Manag. 56:102071. doi: 10.1016/j.ipm.2019.102071
 - [Skiti-learn.org `sklearn.ensemble`.RandomForestRegressor. Available online](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
+- Lauritzen, K. (2019). How to maximize profits on Airbnb? Data-based approach for hosts. Towards Data Science. Retrieved June 8, 2022, from https://towardsdatascience.com/how-to-maximize-profits-on-airbnb-data-based-approach-for-hosts-beaf08f26941. 
 - The code we used for our project to analyse our data can be viewed on our [GitHub repository here](https://github.com/07shriyab/Airbnb-Data-Science-Project).
 
 
