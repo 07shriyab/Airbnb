@@ -23,7 +23,7 @@ Overall, we recognized the listings and reviews data is not perfect because the 
 
 Finally, we were able to put together a list of recommendations to prospective guests and hosts in order to make the most value out of their next property rental. Two examples of these include:
 - Location is an important factor that affects prices 
-- the most expensive boroughs are in the centre of London (Kensington, Chelsea, City of London, Westminster)
+- The most expensive boroughs are in the centre of London (Kensington, Chelsea, City of London, Westminster)
 - Top amenities an aspiring host should include: Wifi, smoke alarm, essentials, heating, long term stay allowed
 
 
