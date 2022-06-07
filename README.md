@@ -364,7 +364,7 @@ It is viewed that a higher overall review score (5) is given to the most propert
 This links to the feature importance on price as  review_score_rating  are not as important in predicting prices. Overall, there’s no correlation between the review_score_rating and the prices. This means that cheaper listings can have either absolute best services or the worst services than the expensive listings (which seem to have a somewhat better review score from $400). This means that there could be other aspects of the Airbnb rentals that lead to the score rating. This is where analysing comments becomes important to find the reasoning behind the review score rating.
 
 ![](Images/reviewspermonthvsprice.png)
-![](Images/scatterplotofreviewsratingsvsprice.png)
+![](Images/pricevsreviewspermonthmorethan175.png)
 
 We can see that most reviews range from 0 to 5 reviews per month across all prices. However, the data shows the number of reviews across any month. It has been evidently seen that at $175, there are 25 reviews per month which are the highest compared to other prices. This shows that reviews are important when setting prices because they will lead to more attractions as the customers have a better understanding of how the properties and the stay are.
 
