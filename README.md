@@ -420,17 +420,101 @@ Furthermore,  it doesn't help to explain how it relates to prices. However, it d
 
 Overall, names of properties(textual data) and sentiment analysis of the comments does affect price.
 
-**Overall eature Importance of Selected Factors**
+**Overall Feature Importance of Selected Factors**
 
-
+![](Images/overallfeatureimportancedecisiontree.png)
 ![](Images/
-![](Images/
+
+These graphs were plotted using different modules - the Decision Tree Classifier (left) and Random Forest Regression (right). The decision tree, however, tends to overfit data and thus we found that the random forest model was more accurate because it chooses features randomly during the training process. This model, which produced the graph on the right, suggests that the total number of listings per host was the most important factor. This could be because more experienced hosts know the market better and are able to adopt a more appropriate pricing strategy. It is almost given that factors like the number of bedrooms, bathrooms, beds and guests accommodated were close to the top in terms of importance, but what was slightly surprising was that review scores did not seem to matter as much as we expected. This suggests that…
+
+A limitation of the feature importance graphs (as well as the heat map) is that it was plotted only with factors that had numerical (integer/float) values, and thus did not incorporate amenities, location, property or room type. Furthermore, despite the fact that certain factors were found to be of highest importance in determining price, our individual analysis of them shows that the correlations were still not very strong. 
+
+A few reasons we came up to explain this phenomenon include:
+- Some hosts might not know how to price their listings and may simply choose a price without following any real approach
+- Pricings would be quite subjective because different individuals would attach different levels of importance to certain factors
+   - For instance, one host might think that having more bathrooms is important and thus would charge a higher price simply because of this, but another might not. 
+
+**Sub Problem 3: Can we Predict Prices Using Machine Learning?**
+
+Reason for predicting London Airbnb rental prices:
+
+As house prices rise annually, it is necessary to create a mechanism (using machine learning models) to forecast future AirBnB properties. Landowners, estate values, hosts, investors and guests may use the house price prediction to calculate the valuation of a rental property, especially because individual factors such as physical condition, styles, reviews and location all  influence listing prices.
+
+Summary of Data Cleaning process:
+1. Dropping the irrelevant variables, and includes “host_id”, "minimum_nights" etc
+2. Exclude the properties with listed prices of 0
+3. Filling the missing NaN in “reviews_per month” and “host_total_listing_count” with 0 values
+4. Creating a dummy for the categorical variables. Data_encoded(“minimum_night”)
+
+The Train and Test Split: 
+
+![](Images/traintestsplitpredictingprices.png)
+
+The Test and Train group shapes  for Hosting_Listing_count, Neighbourhood_cleansed_Cat and Room_type_Cat were (46632,3) and (19986,3), respectively.
+
+One would perform TTS on a data set randomly(apart from time series). So, we  separated the models into 2 groups: train and test. This allows us to use one set to train the model on and then another to test it with. For a large-sized dataset like ours, a 70/30 split between train and test is usually conventional.
+
+The simplest way you could create a train and trust dataset from the initial one is by using Scikit-learn’s train_test split function with the test size = 0.3. This would however lead to one issue: The target value( i.e price) could be biassed by chance.
 
 
+1. Linear Regression 
+
+![](Images/LinearRegequation.png)
+
+The reason why to choose availability_365 as an independent variable is because it is one of the top important features to predict prices. Furthermore, the customers are interested mainly in the availability of the property when one is booking in AirBnB. 
+
+Linear Regression was set as a baseline model on the dataset using all of the features as model inputs. A python package, Sklearn, was used to calculate this model; the results are as follows:
+- intercept: 0.1668724
+- The coefficient is 129.48. By checking the R-squared, we can see that less than half of the variance in the outcome variable(price)  can be explained by the model. 
 
 
+2. Multiple Regression 
+
+![](Images/multipleregressionequation.png)
+
+This is the screenshot of the independent variables and dependent variables:
+- host_total_listings_count: number of listings owned and operated by a single host. This shows how experienced the host is when setting prices. Therefore, it will be a strong comparison when predicting prices for certain situations.
+- Neighbourhood_cleansed_Cat: this is where the location becomes important in predicting prices. For example, if the neighbourhood is in-demand, then raise the prices and if the neighbourhood is in less demand, then lower prices. This was encoded into ordinal values.
+- Room_type_Cat: If the room offers an en-suite bathroom or a private balcony, it will help the rental property to stand out and this will affect the price. This was encoded into ordinal values. 
+
+This multiple regression provides these  results:
+- intercept: 155
+- Coefficient: 0.07 for the host_total_listing_counts, 1.15 for the neighbourhood_cleansed_Cat, and -51.002 for room_type_Cat.
 
 
+3. KKN(K-Nearest Neighbours) Regression 
+
+K-Nearest Neighbours is a type of instance-based learning. For this technique, the model tries to find a number (k) of training examples closest in distance to a new point, and predict the output for this new point from these closest neighbours. The feature importance was calculated using the KNN Classifier of scklearn package. 
+
+
+4. Decision Tree
+
+The purpose is to create a model that predicts the value of the target variable by learning simple decision rules from data features. We use the same independent variables as shown in the multiple regression. This was done using Sklearn and the Decision Classifier(random-state= 42).
+
+![](Images/decisiontree.png)
+
+Limitation of Decision Tree: The technique requires advanced knowledge such as pruning or setting the maximum depth of the tree to avoid such problems with an assembled tree(VlahovIjak Alen. 2022). 
+
+
+5. Random Forest 
+
+A random forest is a meta estimator (n_estimator =1000 and random-state= 42)  that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting (Scikit-learn.org). The independent variables from the multiple regression are used.
+
+The important error metrics for each model are used to analyse the overfitting of the data:
+- Mean Absolute Error(MAE)
+- Mean Squared Error(MSE)
+- Rooted Mean Squared Error(RMSE)
+- R-squared(R2)
+
+![](Images/MSE.png)
+
+Among all tested models, Random Forest performs the best and produces the lowest RMSE, MSE and the highest R2  on the train-test sets in terms of price, compared to other algorithms (KNN, Decision Tree, Linear Regression and Multiple Regression). This level of accuracy is a promising outcome given the heterogeneity of the dataset, therefore the hosts, guests and investors can use this model with more means to try to reduce error by a few cents.
+
+However, the Random Forest model produces the highest MSE, which means that there are outliers on the errors as demonstrated below in boxplots. For example, it shows that the Random Forest (RF) test model has the median of prediction error (MAE) of around $26 and the interquartile range is around $30. This means that 50% of the sample could be right and another 505 may be very wrong. It will be cheating to improve the regression models to drop the outliers due to  the cost of removing valuable price observations. The outliers may factor in where some of the hosts set their Airbnb at very highly skewed prices because of other unique characteristics that are not accounted for, such as minimum nights, reviews ratings. Furthermore, there is a bit of selection bias when selecting the parameters of the train and test split and evaluation. 
+
+This shows that machine learning may not be perfect as the data may have not been processed before due to several NaN values and the data being static.
+
+![](Images/MSEboxplots.png)
 
 
 ## Conclusion
@@ -442,11 +526,26 @@ However, some factors that are worth advising hosts and guests on are:
 - It is evident from our analysis that location is an important factor. Locations such as Kensington, Chelsea, City of London and Westminster that are in central London are able to fetch higher prices from their listings. In order to maximise revenue, having a listing in one of these prime locations allows a host to command higher rates per night.
 - The number of bedrooms, beds and guests accommodated all also have a relatively strong correlation with the median price. If a listing is able to cater for more guests, they can charge higher prices too.
 
-For the comments section, it is part of a business person to investigate this because it is common for consumers to check out the positive, neutral and negative reviews. From the data, Airbnb has a pleasant experience when using the service, there are more positive comments and more 5-star scores. Evidence shows that “for customers, online is revealed to be an essential information source of decision making (Shengli and Fan, 2019 ), and almost 95% of travellers read the online reviews before purchasing a travel product (Ady and Quadri-Felitti, 2015)”.  The NLTK is able to classify the sentiment category well but sometimes, human effort is needed to improve the accuracy. For neutral and bad comments, the hosts should take action when reading them.  If there are more negative comments about the Airbnb rental, this will scare the consumers away. 
+For the comments section, it is part of a business person to investigate this because it is common for consumers to check out the positive, neutral and negative reviews. From the data, Airbnb has a pleasant experience when using the service, there are more positive comments and more 5-star scores. Evidence shows that “for customers, online is revealed to be an essential information source of decision making (Shengli and Fan, 2019), and almost 95% of travellers read the online reviews before purchasing a travel product (Ady and Quadri-Felitti, 2015)”.  The NLTK is able to classify the sentiment category well but sometimes, human effort is needed to improve the accuracy. For neutral and bad comments, the hosts should take action when reading them.  If there are more negative comments about the Airbnb rental, this will scare the consumers away. 
 
 Linear regression and machine learning to predict prices had some selection bias and required further pre-processing of the data hence may not have been the most accurate model thus giving us some poor results. For further future work on predicting prices using machine learning, we could explore more models such as XGB Booster, GradientBoostingRegressor, and  “conduct a more exhaustive parameter tuning”. Even so, the Random Forest model is a better predictor of prices for this listing's data with maximum accuracy. We must think more about how to reduce the errors of the outliers and what they represent in all machine learning models. 
 
 ## Appendix
+
+[Ady, M., and Quadri-Felitti, D. (2015). Consumer Research Identifies How to Present Travel Review Content for More Bookings. Available online at ](https://www.trustyou.com/press/study-reveals-travelers-prefer-summarized-review-content-full-text-reviews) 
+
+[Airbnb. (2020). Setting a pricing strategy. Airbnb. Retrieved June 5, 2022. Avaliable online](https://www.airbnb.co.uk/resources/hosting-homes/a/setting-a-pricing-strategy-15)
+
+[Airbnb. (2020). ‘The Amenities Guests Wants’. Available online](https://www.airbnb.co.uk/resources/hosting-homes/a/the-amenities-guests-want-25)
+
+[Oluwalana, A. (2022). Zoopla property heatmap shows the average house price in every London borough. MyLondon. Retrieved June 5, 2022. Available online](https://www.mylondon.news/news/property/zoopla-property-heatmap-shows-average-23950169)
+
+Shengli, L., and Fan, L. (2019). The interaction effects of online reviews and free samples on consumers' downloads: an empirical analysis. Inf. Process Manag. 56:102071. doi: 10.1016/j.ipm.2019.102071
+
+[Skiti-learn.org `sklearn.ensemble`.RandomForestRegressor. Available online](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
+
+The code we used for our project to analyse our data can be viewed on our [GitHub repository here](https://github.com/07shriyab/Airbnb-Data-Science-Project).
+
 
 ```markdown
 Syntax highlighted code block
