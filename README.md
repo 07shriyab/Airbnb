@@ -231,7 +231,7 @@ The trends in prices of these three (true vs false) factors were correlated with
 
 <img src="Images/totallistingsperhostvspricewithlineofbestfit.png" width="500" height="387" >
 
-The graph on the left depicts the change in median price when the number of total listings each host has increases, after outliers were removed. The graph on the left shows a similar graph with a different scale and a regression line of best fit plotted with seaborn. 
+The first graph depicts the change in median price when the number of total listings each host has increases, after outliers were removed. The graph below shows a similar graph with a different scale and a regression line of best fit plotted with seaborn. 
 
 
 **5. Number of guests accommodated**
@@ -262,16 +262,16 @@ The data we found suggests that there is likely to be displacement for communiti
 
 This simply shows the number of each listing. Since we have 85 unique property types, we decided to group them as 'Freestanding', 'Attached', ‘Luxury’ and 'Other'. This was based on our own judgement of which category we thought fit the property most appropriately. The categories were decided in this manner:
 
-- Freestanding - properties with a freestanding house and land immediately around it (privacy)
+1. Freestanding - properties with a freestanding house and land immediately around it (privacy)
    - Includes: townhouse, residential home, bungalow, cottage
 
-- Attached - properties connected to larger complexes with multiple units
+2. Attached - properties connected to larger complexes with multiple units
    - Includes: condominium, hostel, hotel, guest house
 
-- Luxury - higher-end properties (e.g. a splurge as part of a destination wedding or other event)
+3. Luxury - higher-end properties (e.g. a splurge as part of a destination wedding or other event)
    - Includes: villa, chalet, vacation home
 
-- Other - unique properties that fit into none of the above categories
+4. Other - unique properties that fit into none of the above categories
    - Includes: boat, barn
 
 We expected luxury properties to have the highest median price, but it was surprising that it was the lowest. This could have been affected by the location, or by the small sample size which may have had extreme values (especially because we did not differentiate between an entire place and a shared room when plotting these graphs) and fluctuations that caused the median to be lower.
@@ -323,7 +323,7 @@ We found no trend from the data, and the only observation we made was that the A
 ![](Images/minimumnumberofnightsvsmedianpricewithoutlier.png)
 ![](Images/listingspricesbyminimumnightswithoutoutliers.png)
 
-Since we were unable to see a trend from the first graph (left), we decided to remove the outliers, not with the intention of manipulating our results, but simply to compare the difference and see if we could observe a clearer pattern of the points in a cluster. However, there still was not much correlation between the minimum number of nights a customer needs to stay in an Airbnb and the listing price, which means that hosts do not need to focus on choosing their price based on this factor. 
+Since we were unable to see a trend from the first graph (top), we decided to remove the outliers, not with the intention of manipulating our results, but simply to compare the difference and see if we could observe a clearer pattern of the points in a cluster. However, there still was not much correlation between the minimum number of nights a customer needs to stay in an Airbnb and the listing price, which means that hosts do not need to focus on choosing their price based on this factor. 
 
 **13. Amenities**
 
