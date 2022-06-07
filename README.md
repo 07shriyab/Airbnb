@@ -360,7 +360,7 @@ Overall, amenities, such as Wifi and parking spaces, does affect price, as shown
 
 ![](Images/barcharttop20amenities.png)
 
-**Sub Problem 2: Do reviews actually matter?**
+### Sub Problem 2: Do reviews actually matter?
 
 ![](Images/scatterplotofreviewsratingsvsprice.png)
 
@@ -440,7 +440,7 @@ A few reasons we came up to explain this phenomenon include:
 - Pricings would be quite subjective because different individuals would attach different levels of importance to certain factors
    - For instance, one host might think that having more bathrooms is important and thus would charge a higher price simply because of this, but another might not. 
 
-**Sub Problem 3: Can we Predict Prices Using Machine Learning?**
+### Sub Problem 3: Can we Predict Prices Using Machine Learning?
 
 Reason for predicting London Airbnb rental prices:
 
