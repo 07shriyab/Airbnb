@@ -532,19 +532,13 @@ Linear regression and machine learning to predict prices had some selection bias
 
 ## Appendix
 
-[Ady, M., and Quadri-Felitti, D. (2015). Consumer Research Identifies How to Present Travel Review Content for More Bookings. Available online at ](https://www.trustyou.com/press/study-reveals-travelers-prefer-summarized-review-content-full-text-reviews) 
-
-[Airbnb. (2020). Setting a pricing strategy. Airbnb. Retrieved June 5, 2022. Avaliable online](https://www.airbnb.co.uk/resources/hosting-homes/a/setting-a-pricing-strategy-15)
-
-[Airbnb. (2020). ‘The Amenities Guests Wants’. Available online](https://www.airbnb.co.uk/resources/hosting-homes/a/the-amenities-guests-want-25)
-
-[Oluwalana, A. (2022). Zoopla property heatmap shows the average house price in every London borough. MyLondon. Retrieved June 5, 2022. Available online](https://www.mylondon.news/news/property/zoopla-property-heatmap-shows-average-23950169)
-
-Shengli, L., and Fan, L. (2019). The interaction effects of online reviews and free samples on consumers' downloads: an empirical analysis. Inf. Process Manag. 56:102071. doi: 10.1016/j.ipm.2019.102071
-
-[Skiti-learn.org `sklearn.ensemble`.RandomForestRegressor. Available online](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
-
-The code we used for our project to analyse our data can be viewed on our [GitHub repository here](https://github.com/07shriyab/Airbnb-Data-Science-Project).
+- [Ady, M., and Quadri-Felitti, D. (2015). Consumer Research Identifies How to Present Travel Review Content for More Bookings. Available online at ](https://www.trustyou.com/press/study-reveals-travelers-prefer-summarized-review-content-full-text-reviews)
+- [Airbnb. (2020). Setting a pricing strategy. Airbnb. Retrieved June 5, 2022. Avaliable online](https://www.airbnb.co.uk/resources/hosting-homes/a/setting-a-pricing-strategy-15)
+- [Airbnb. (2020). ‘The Amenities Guests Wants’. Available online](https://www.airbnb.co.uk/resources/hosting-homes/a/the-amenities-guests-want-25
+- [Oluwalana, A. (2022). Zoopla property heatmap shows the average house price in every London borough. MyLondon. Retrieved June 5, 2022. Available online](https://www.mylondon.news/news/property/zoopla-property-heatmap-shows-average-23950169)
+- Shengli, L., and Fan, L. (2019). The interaction effects of online reviews and free samples on consumers' downloads: an empirical analysis. Inf. Process Manag. 56:102071. doi: 10.1016/j.ipm.2019.102071
+- [Skiti-learn.org `sklearn.ensemble`.RandomForestRegressor. Available online](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
+- The code we used for our project to analyse our data can be viewed on our [GitHub repository here](https://github.com/07shriyab/Airbnb-Data-Science-Project).
 
 
 ```markdown
