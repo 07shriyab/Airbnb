@@ -323,7 +323,7 @@ We found no trend from the data, and the only observation we made was that the A
 ![](Images/minimumnumberofnightsvsmedianpricewithoutlier.png)
 ![](Images/listingspricesbyminimumnightswithoutoutliers.png)
 
-Since we were unable to see a trend from the first graph (top), we decided to remove the outliers, not with the intention of manipulating our results, but simply to compare the difference and see if we could observe a clearer pattern of the points in a cluster. However, there still was not much correlation between the minimum number of nights a customer needs to stay in an Airbnb and the listing price, which means that hosts do not need to focus on choosing their price based on this factor. 
+Since we were unable to see a trend from the first graph (left), we decided to remove the outliers, not with the intention of manipulating our results, but simply to compare the difference and see if we could observe a clearer pattern of the points in a cluster. However, there still was not much correlation between the minimum number of nights a customer needs to stay in an Airbnb and the listing price, which means that hosts do not need to focus on choosing their price based on this factor. 
 
 **13. Amenities**
 
