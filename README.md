@@ -213,13 +213,62 @@ This was a surprising result. Being an Airbnb consumer ourselves, we tend to loo
 
 **2. Is the host’s identity verified?**
 
+![](Images/hostidentityverified.png)
 
+The results suggest that Airbnb listings posted on the site by hosts who have verified their identity have a median price about £20 higher than those who do not, which is quite a significant difference given that this is a 33% increase from the median price of listings whose hosts do not have verified identities.
+
+**3. Can the Airbnb be booked instantly?**
+
+![](Images/instantbookable.png)
+
+Whether the Airbnb can be booked instantly has a similar effect on price as the superhost factor, with instantly bookable listings having a lower median price.
+
+The trends in prices of these three (true vs false) factors were correlated with the category counts, which may or may not be a coincidence. A  problem we found throughout our analysis that might explain the results was that where there were significant differences in the number of Airbnb listings in each category, the factor’s effect on price was the opposite of what we expected. This could be due to the more pronounced impact of extreme prices on the median value when there are fewer listings in a particular category, causing the results to change quite significantly. 
+
+**4. Total number of listings per host**
+
+![](Images/totallistingsperhostvsprice.png)
+![](Images/totallistingsperhostvspricewithlineofbestfit.png)
+
+The graph on the left depicts the change in median price when the number of total listings each host has increases, after outliers were removed. The graph on the left shows a similar graph with a different scale and a regression line of best fit plotted with seaborn. 
+
+
+**5. Number of guests accommodated**
+
+![](Images/noofguestsaccomodated.png)
+
+We found that the more guests accommodated, the higher the prices. However, it is not fully the case as 13 guests and 15 guests are accommodated around the median price of 7 guests. Therefore, there is not a clear picture of the correlation between number of guests accommodated and the median price, as other factors could also be coming into play.
+
+**6. Which neighbourhoods in London are the most popular and where are the most expensive listings?**
+
+![](Images/pythonneighbourmap.png)
+
+We used a map to illustrate the number of Airbnb listings according to neighbourhood as well as the median price. We then compared this to a heat map from Zoopla, a real estate company, which showed the relative prices of housing in London boroughs. As expected, it had a similar trend with the most expensive boroughs located in the middle of London. However, as the map does not tell us the specific names of neighbourhoods, we also plotted it on a horizontal bar chart to see the differences more clearly.
+
+![](Images/neighbourhoodmapfromarticle.png)
+
+![](Images/neighbourhoodvsmedianprice.png)
+
+This bar plot shows us to identify that the top 4 boroughs with the highest median prices of Airbnb listings are Kensington and Chelsea, City of London, Westminster and Camden. This was slightly different from the graph I plotted before the prices were limited, but the top 5 most expensive neighbourhoods are still the same, just in a different order. Using the map from Zoopla (which allowed us to look at the names of boroughs), the top 4 were Kensington and Chelsea, Westminster, Hammersmith and Fulham and Camden. This was almost the same as what we found, suggesting that Airbnb prices are generally consistent with the trends in for-sale property prices.
+
+The data we found suggests that there is likely to be displacement for communities in the priciest neighbourhoods, especially given the fact that the number of Airbnb listings in London has increased 571%. This is known as tourism gentrification, where tourists displace residents from their local communities through increases in rental prices and decreased housing availability, making it difficult for people to find an affordable home to rent in their local neighbourhood. 
 
 
 
 
 
 ## Conclusion
+
+Based on the individual analysis of factors, we found that it was difficult to isolate them and determine their correlation with median prices due to the confounding effects of other variables that are all interdependent.
+
+However, some factors that are worth advising hosts and guests on are: 
+- Hosts should ensure that they have verified their identity to ensure better trust between the guest and host and the ability to charge higher prices.
+- It is evident from our analysis that location is an important factor. Locations such as Kensington, Chelsea, City of London and Westminster that are in central London are able to fetch higher prices from their listings. In order to maximise revenue, having a listing in one of these prime locations allows a host to command higher rates per night.
+- The number of bedrooms, beds and guests accommodated all also have a relatively strong correlation with the median price. If a listing is able to cater for more guests, they can charge higher prices too.
+
+For the comments section, it is part of a business person to investigate this because it is common for consumers to check out the positive, neutral and negative reviews. From the data, Airbnb has a pleasant experience when using the service, there are more positive comments and more 5-star scores. Evidence shows that “for customers, online is revealed to be an essential information source of decision making (Shengli and Fan, 2019 ), and almost 95% of travellers read the online reviews before purchasing a travel product (Ady and Quadri-Felitti, 2015)”.  The NLTK is able to classify the sentiment category well but sometimes, human effort is needed to improve the accuracy. For neutral and bad comments, the hosts should take action when reading them.  If there are more negative comments about the Airbnb rental, this will scare the consumers away. 
+
+Linear regression and machine learning to predict prices had some selection bias and required further pre-processing of the data hence may not have been the most accurate model thus giving us some poor results. For further future work on predicting prices using machine learning, we could explore more models such as XGB Booster, GradientBoostingRegressor, and  “conduct a more exhaustive parameter tuning”. Even so, the Random Forest model is a better predictor of prices for this listing's data with maximum accuracy. We must think more about how to reduce the errors of the outliers and what they represent in all machine learning models. 
 
 ## Appendix
 
