@@ -1,5 +1,6 @@
 ---
-title: "Exploring the factors that affect Airbnb prices in London"
+title: "Exploring the Factors that affect Airbnb Prices in London"
+
 ---
 
 
