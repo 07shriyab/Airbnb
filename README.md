@@ -545,5 +545,5 @@ Linear regression and machine learning to predict prices had some selection bias
 - [Skiti-learn.org `sklearn.ensemble`.RandomForestRegressor. Available online](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
 - Lauritzen, K. (2019). How to maximize profits on Airbnb? Data-based approach for hosts. Towards Data Science. Retrieved June 8, 2022, from https://towardsdatascience.com/how-to-maximize-profits-on-airbnb-data-based-approach-for-hosts-beaf08f26941. 
 - The code we used for our project to analyse our data can be viewed on our [GitHub repository here](https://github.com/07shriyab/Airbnb-Data-Science-Project).
-- The London datasets we used were complied at 9th Sep 2021 in [InsideAirbnb].
+- The London datasets we used were complied at 9th Sep 2021 in [InsideAirbnb](http://insideairbnb.com/get-the-data/).
 
