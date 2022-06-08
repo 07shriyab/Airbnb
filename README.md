@@ -1,4 +1,7 @@
-# Exploring the factors that affect Airbnb prices in London
+---
+title: "Exploring the factors that affect Airbnb prices in London"
+---
+
 
 ## Focus Problem
 
