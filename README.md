@@ -84,10 +84,12 @@ This dataset contains information about Airbnb listings, including neighbourhood
 ![](Images/wholelistingscsv.png)
 
 Descriptive statistics of listings.csv (Part 1):
-![](Images/listings statistics.png)
+
+![](Images/listings%20statistics.png)
 
 Descriptive statistics of listings.csv (Part 2):
-![](Images/Reviews listings statistics(2).png)
+
+![](Images/Reviews%20listings%20statistics(2).png)
 
 
 2. Reviews.csv
@@ -97,7 +99,8 @@ This dataset contains written comments by guests about their experiences in a pa
 ![](Images/wholereviewscsv.png)
 
 Descriptive statistics of reviews.csv:
-![](Images/Reviews statistics.png)
+
+![](Images/Reviews%20statistics.png)
 
 Sample of a negative review: (polarity score < 0):
 
