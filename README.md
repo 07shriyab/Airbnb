@@ -136,11 +136,11 @@ Descriptive statistics are useful as they can help us understand the collective 
 
 Overall we were looking at both continuous and discrete numerical data in terms of pricing, number of guests etc and nominal categorical textual data in the reviews, locations and amenities.
 
-Central Tendency
+Central Tendency:
 
 The median price of all listings was £85. We opted to focus on median prices over mean prices to avoid the problems caused by outliers and extreme values within the dataset. 
 
-Dispersion
+Dispersion:
 
 There was a wide range of prices across the listings ranging from ____ - our limit of £1000
 
@@ -375,7 +375,7 @@ This links to the feature importance on price as review_score_rating is not as i
 
 We can see that most reviews range from 0 to 5 reviews per month across all prices. However, the data shows the number of reviews across any month. It has been evidently seen that at $175, there are 25 reviews per month which are the highest compared to other prices. This shows that reviews are important when setting prices because they will lead to more attractions as the customers have a better understanding of how the properties and the stay are.
 
-The reviews per month are more situated around the prices below $10000. This means that the reviews_per_month may be requested more by the hosts/owners to boost their popularity or reduce seeking guests’ suspicions. This is because they may be more convinced to book the apartment if they read about the experiences of the previous guest and do not fully associate  the low price with a low-quality property.
+The ``reviews_per_month`` are more situated around the prices below $10000. This means that the reviews_per_month may be requested more by the hosts/owners to boost their popularity or reduce seeking guests’ suspicions. This is because they may be more convinced to book the apartment if they read about the experiences of the previous guest and do not fully associate  the low price with a low-quality property.
 
 **Sentiment Analysis**
 
