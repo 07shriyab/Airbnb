@@ -368,7 +368,7 @@ Overall, amenities, such as Wifi and parking spaces, do affect price, as shown i
 
 It is viewed that a higher overall review score (5) is given to the most properties that are less than $400 (around £300). This shows that the overall review score is not positively correlated with prices. Also, there are some expensive listings with low review ratings.
 
-This links to the feature importance on price as review_score_rating is not as important in predicting prices. Overall, there’s no correlation between the review_score_rating and the prices. This means that cheaper listings can have either absolute best services or the worst services than the expensive listings (which seem to have a somewhat better review score starting from $400). This means that there could be other aspects of the Airbnb rentals that lead to the score rating. This is where analysing comments becomes important to find the reasoning behind the review score rating.
+This links to the feature importance on price as ``review_score_rating`` is not as important in predicting prices. Overall, there’s no correlation between the ``review_score_rating`` and prices. This means that cheaper listings can have either absolute best services or the worst services than the expensive listings (which seem to have a somewhat better review score starting from $400). This means that there could be other aspects of the Airbnb rentals that lead to the score rating. This is where analysing comments becomes important to find the reasoning behind the review score rating.
 
 ![](Images/reviewspermonthvsprice.png)
 ![](Images/pricevsreviewspermonthmorethan175.png)
