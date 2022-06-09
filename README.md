@@ -83,11 +83,21 @@ This dataset contains information about Airbnb listings, including neighbourhood
 
 ![](Images/wholelistingscsv.png)
 
+Descriptive statistics of listings.csv (Part 1):
+![](Images/listings statistics.png)
+
+Descriptive statistics of listings.csv (Part 2):
+![](Images/Reviews listings statistics(2).png)
+
+
 2. Reviews.csv
 
 This dataset contains written comments by guests about their experiences in a particular Airbnb. There are over 1 million rows of reviews, with some listings (given by listing_id) having multiple reviews. 
 
 ![](Images/wholereviewscsv.png)
+
+Descriptive statistics of reviews.csv:
+![](Images/Reviews statistics.png)
 
 Sample of a negative review: (polarity score < 0):
 
