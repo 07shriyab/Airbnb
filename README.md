@@ -142,7 +142,7 @@ The median price of all listings was £85. We opted to focus on median prices ov
 
 Dispersion:
 
-There was a wide range of prices across the listings ranging from 0 to our limit of £1000
+There was a wide range of prices across the listings ranging from £0 to our limit of £1000
 
 ## Methodology
 
