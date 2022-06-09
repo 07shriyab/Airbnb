@@ -435,7 +435,7 @@ Using the Nltk CountVectorizer(), the top 10 common words in the ``comments`` ar
 
 ![](Images/wordcloudcomments.png)
 
-This word cloud shows the most frequently used words in the ``comments``. We can see that ``great”, location”, clean”, place”, and “recommend” are mostly featured in the comments.  The host is definitely one of the most valuable aspects, essentially for his/her availability, help and welcome. This is what guests are looking for when booking a rental. However, it is difficult to understand the actual context of each review as it could be given with a negative token,  such as “not” e.g “not great”.
+This word cloud shows the most frequently used words in the ``comments``. We can see that "great”, location”, clean”, place”, and “recommend” are mostly featured in the comments.  The host is definitely one of the most valuable aspects, essentially for his/her availability, help and welcome. This is what guests are looking for when booking a rental. However, it is difficult to understand the actual context of each review as it could be given with a negative token,  such as “not” e.g “not great”.
 
 Furthermore,  it doesn't help to explain how it relates to prices. However, it does give an idea to the hosts of what people are commenting on AirBnB nowadays and may use it to describe their properties. This allows us to see how hosts are naming their property, and what words the guests  can expect to see in the comments section when browsing for an Airbnb. 
 
