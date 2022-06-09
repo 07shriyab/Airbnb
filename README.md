@@ -358,7 +358,7 @@ Using the NumPy concatenate, the top 20 amenities were counted and the results s
 
 Though, with limited data, wifi could be more important than the machine learning analysis on which amenities are important. The reason why wifi may be provided more is that it is super important for the guests. So, the comparison may be invalid in this case. To support my point, we see that Wi-Fi is not part of the top 5 amenities from the feature importance. That is because almost all homes have Wi-Fi/internet nowadays! It was expected that WiFi would not affect the prices significantly.
 
-Overall, amenities, such as Wifi and parking spaces, does affect price, as shown in our findings. Therefore, these amenities should be considered by the hosts when posting their rental properties in Airbnb.
+Overall, amenities, such as Wifi and parking spaces, do affect price, as shown in our findings. Therefore, these amenities should be considered by the hosts when posting their rental properties on Airbnb.
 
 ![](Images/barcharttop20amenities.png)
 
@@ -368,7 +368,7 @@ Overall, amenities, such as Wifi and parking spaces, does affect price, as shown
 
 It is viewed that a higher overall review score (5) is given to the most properties that are less than $400 (around £300). This shows that the overall review score is not positively correlated with prices. Also, there are some expensive listings with low review ratings.
 
-This links to the feature importance on price as  review_score_rating  are not as important in predicting prices. Overall, there’s no correlation between the review_score_rating and the prices. This means that cheaper listings can have either absolute best services or the worst services than the expensive listings (which seem to have a somewhat better review score from $400). This means that there could be other aspects of the Airbnb rentals that lead to the score rating. This is where analysing comments becomes important to find the reasoning behind the review score rating.
+This links to the feature importance on price as review_score_rating is not as important in predicting prices. Overall, there’s no correlation between the review_score_rating and the prices. This means that cheaper listings can have either absolute best services or the worst services than the expensive listings (which seem to have a somewhat better review score starting from $400). This means that there could be other aspects of the Airbnb rentals that lead to the score rating. This is where analysing comments becomes important to find the reasoning behind the review score rating.
 
 ![](Images/reviewspermonthvsprice.png)
 ![](Images/pricevsreviewspermonthmorethan175.png)
