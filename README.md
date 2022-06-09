@@ -154,17 +154,17 @@ As delineated in our code, we chose graph types based on what we felt suited the
 
 In some graphs such as that of the minimum number of nights versus price, we identified extreme outliers which hindered our ability to identify a pattern. To avoid changing the data completely, we removed outliers using the interquartile method but still kept the original graph to compare the two. While we understood that ‘true outliers’ represent natural variations and should be kept in the dataset, in this case, we removed them to get a clearer idea of the distribution of the scatter points. However, in most of our other graphs, we did not change the results even if it did not match our predictions at all, because this would have reduced the accuracy and validity of our analysis.
 
-In the reviews data, the comments were cleaned and preprocessed  by filtering out the empty comments, removing the unicode characters, changing it to lowercase, removing the windows to new lines, removing all the stop words, and replacing the amount of spaces to one space. Given that all of the comments were in sentences, they were split into words using the word_tokenize in NLTK library. The words were captured using the Count_Vectorizer() and was created as a separate dataframe to explore the amount of times those top 20 words occurred. This will make it easier to create WordCloud of the top words in the ‘comments’ column.
+In the reviews data, the comments were cleaned and preprocessed  by filtering out the empty comments, removing the unicode characters, changing it to lowercase, removing the windows to new lines, removing all the stop words, and replacing the amount of spaces to one space. Given that all of the comments were in sentences, they were split into words using the word_tokenize in NLTK library. The words were captured using the Count_Vectorizer() and was created as a separate dataframe to explore the amount of times those top 20 words occurred. This will make it easier to create WordCloud of the top words in the ``comments``.
 
 In comparison of the reviews_score_ratings and price, the prices were changed into floats and plotted the graph using matplotlib.
 
-To analyse the names of properties with top 100 cheapest and expensive listings, we selected ‘names’ and ‘price’ from the listings data. Then, we created 2 dataframes for both the top 100 expensive and cheapest listings, which include the ‘names’. After preprocessing the dataframes using the same steps for cleaning the comments with NLTK, then WordCloud was created for both dataframes with the help of matplotlib.
+To analyse the names of properties with top 100 cheapest and expensive listings, we selected ``names`` and ``price`` from the listings data. Then, we created 2 dataframes for both the top 100 expensive and cheapest listings, which include the ``names``. After preprocessing the dataframes using the same steps for cleaning the comments with NLTK, then WordCloud was created for both dataframes with the help of matplotlib.
 
 To calculate the subjectivity and polarity of the 10000 comments in the reviews data, we used Textblob sentiment after cleaning the textual data.  Then, we analysed the polarity scores to see whether it is a negative comment as the score is less than zero, neutral comment as the score is equal to zero, or a positive comment as the score is greater than zero.
 
-For the amenities, the data was cleaned by removing the NaN values and then the amenities section was changed into lists and was able to string replace the brackets and the apostrophes to create a set of all possible amenities.
+For the ``amenities``, the data was cleaned by removing the NaN values and then the amenities section was changed into lists and was able to string replace the brackets and the apostrophes to create a set of all possible amenities.
 
-Then, we grouped each amenity into a certain category, if they have the same words/meaning but are in different letter cases or words. Here is a screenshot of the process:
+Then, we grouped each amenity into a certain category, if they have the same words or meaning but are in different letter cases or words. Here is a screenshot of the process:
 
 ![](Images/pythonforgroupingamenities.png)
 
@@ -375,17 +375,17 @@ This links to the feature importance on price as review_score_rating is not as i
 
 We can see that most reviews range from 0 to 5 reviews per month across all prices. However, the data shows the number of reviews across any month. It has been evidently seen that at $175, there are 25 reviews per month which are the highest compared to other prices. This shows that reviews are important when setting prices because they will lead to more attractions as the customers have a better understanding of how the properties and the stay are.
 
-The ``reviews_per_month`` are more situated around the prices below $10000. This means that the reviews_per_month may be requested more by the hosts/owners to boost their popularity or reduce seeking guests’ suspicions. This is because they may be more convinced to book the apartment if they read about the experiences of the previous guest and do not fully associate  the low price with a low-quality property.
+The ``reviews_per_month`` are more situated around the prices below $10000. This means that the ``reviews_per_month`` may be requested more by the hosts/owners to boost their popularity or reduce seeking guests’ suspicions. This is because they may be more convinced to book the apartment if they read about the experiences of the previous guest and do not fully associate  the low price with a low-quality property.
 
 **Sentiment Analysis**
 
-In the comments, which is a free form text column in the reviews.csv, there were instances where these values are not strictly in English only.
+In ``comments``, which is a free form text column in the reviews.csv, there were instances where these values are not strictly in English only.
 
 However, we didn’t adjust it and looked more at the English comments as this language barrier was just a minor issue. The NLTK is a go-to package in Python to obtain a numerical sentiment value of positive, negative and compound(combined) of any given English text. 
 
 ![](Images/sentimentanalysistextblobdataframe.png)
 
-The comments from above for each listing were analysed using Textblob sentiment analysis models. This method assigns a score between -1 and 1 to each review and the scores are averaged across each listing.
+The ``comments`` from above for each listing were analysed using Textblob sentiment analysis models. This method assigns a score between -1 and 1 to each review and the scores are averaged across each listing.
 
 This is the first 10000 comments that were analysed. We can see that there are more positive comments as demonstrated below. 
 
@@ -397,9 +397,9 @@ Importance of text sentiment polarity:
 
 **Names of the Property compared to Prices**
 
-Both attributes, names and comments are free-form text. The name is the title of the property the host provided, while comments are left by the guests that have stayed in them.
+Both attributes, ``names`` and ``comments`` are free-form text. The ``name`` is the title of the property the host provided, while comments are left by the guests that have stayed in them.
 
-“Name” is found in listing.csv and  comments can be found in reviews.csv.
+``name`` is found in listing.csv and  comments can be found in reviews.csv.
 
 Created a dataset and WordCloud of the top 100 most expensive listings: 
 
@@ -416,13 +416,13 @@ Here we have seen the most common words in the summary of the cheapest listings.
 
 **Comments without price comparison**
 
-Using the Nltk CountVectorizer(), the top 10 common words in the comments are shown below: 
+Using the Nltk CountVectorizer(), the top 10 common words in the ``comments`` are shown below: 
 
 <img src="Images/dataframeoftop10wordsincomments.png" width="264">
 
 ![](Images/wordcloudcomments.png)
 
-This word cloud shows the most frequently used words in the comments. We can see that ``great”, location”, clean”, place”, and “recommend” are mostly featured in the comments.  The host is definitely one of the most valuable aspects, essentially for his/her availability, help and welcome. This is what guests are looking for when booking a rental. However, it is difficult to understand the actual context of each review as it could be given with a negative token,  such as “not” e.g “not great”.
+This word cloud shows the most frequently used words in the ``comments``. We can see that ``great”, location”, clean”, place”, and “recommend” are mostly featured in the comments.  The host is definitely one of the most valuable aspects, essentially for his/her availability, help and welcome. This is what guests are looking for when booking a rental. However, it is difficult to understand the actual context of each review as it could be given with a negative token,  such as “not” e.g “not great”.
 
 Furthermore,  it doesn't help to explain how it relates to prices. However, it does give an idea to the hosts of what people are commenting on AirBnB nowadays and may use it to describe their properties. This allows us to see how hosts are naming their property, and what words the guests  can expect to see in the comments section when browsing for an Airbnb. 
 
@@ -448,10 +448,10 @@ Reason for predicting London Airbnb rental prices:
 As house prices rise annually, it is necessary to create a mechanism (using machine learning models) to forecast future AirBnB properties. Landowners, estate values, hosts, investors and guests may use the house price prediction to calculate the valuation of a rental property, especially because individual factors such as physical condition, styles, reviews and location all  influence listing prices.
 
 Summary of Data Cleaning process:
-1. Dropping the irrelevant variables, and includes “host_id”, "minimum_nights" etc
+1. Dropping the irrelevant variables, and includes ``host_id``, ``minimum_nights`` etc
 2. Exclude the properties with listed prices of 0
-3. Filling the missing NaN in “reviews_per month” and “host_total_listing_count” with 0 values
-4. Creating a dummy for the categorical variables. Data_encoded(“minimum_night”)
+3. Filling the missing NaN in ``reviews_per month`` and ``host_total_listing_count`` with 0 values
+4. Creating a dummy for the categorical variables. Data_encoded(``minimum_night``)
 
 The Train and Test Split: 
 
@@ -468,7 +468,7 @@ The simplest way you could create a train and trust dataset from the initial one
 
 ![](Images/LinearRegequation.png)
 
-The reason why to choose availability_365 as an independent variable is because it is one of the top important features to predict prices. Furthermore, the customers are interested mainly in the availability of the property when one is booking in AirBnB. 
+The reason why to choose ``availability_365`` as an independent variable is because it is one of the top important features to predict prices. Furthermore, the customers are interested mainly in the availability of the property when one is booking in AirBnB. 
 
 Linear Regression was set as a baseline model on the dataset using all of the features as model inputs. A python package, Sklearn, was used to calculate this model; the results are as follows:
 - intercept: 0.1668724
@@ -480,13 +480,13 @@ Linear Regression was set as a baseline model on the dataset using all of the fe
 ![](Images/multipleregressionequation.png)
 
 This is the screenshot of the independent variables and dependent variables:
-- host_total_listings_count: number of listings owned and operated by a single host. This shows how experienced the host is when setting prices. Therefore, it will be a strong comparison when predicting prices for certain situations.
-- Neighbourhood_cleansed_Cat: this is where the location becomes important in predicting prices. For example, if the neighbourhood is in-demand, then raise the prices and if the neighbourhood is in less demand, then lower prices. This was encoded into ordinal values.
-- Room_type_Cat: If the room offers an en-suite bathroom or a private balcony, it will help the rental property to stand out and this will affect the price. This was encoded into ordinal values. 
+- ``host_total_listings_count``: number of listings owned and operated by a single host. This shows how experienced the host is when setting prices. Therefore, it will be a strong comparison when predicting prices for certain situations.
+- ``neighbourhood_cleansed_Cat``: this is where the location becomes important in predicting prices. For example, if the neighbourhood is in-demand, then raise the prices and if the neighbourhood is in less demand, then lower prices. This was encoded into ordinal values.
+- ``room_type_Cat``: If the room offers an en-suite bathroom or a private balcony, it will help the rental property to stand out and this will affect the price. This was encoded into ordinal values. 
 
 This multiple regression provides these  results:
 - intercept: 155
-- Coefficient: 0.07 for the host_total_listing_counts, 1.15 for the neighbourhood_cleansed_Cat, and -51.002 for room_type_Cat.
+- Coefficient: 0.07 for the ``host_total_listing_counts``, 1.15 for the ``neighbourhood_cleansed_Cat``, and -51.002 for ``room_type_Cat``.
 
 
 3. KKN(K-Nearest Neighbours) Regression 
