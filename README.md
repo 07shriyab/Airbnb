@@ -248,7 +248,7 @@ We found that the more guests accommodated, the higher the prices. However, it i
 We used a map to illustrate the number of Airbnb listings according to neighbourhood as well as the median price. We then compared this to a heat map from Zoopla, a real estate company, which showed the relative prices of housing in London boroughs. As expected, it had a similar trend with the most expensive boroughs located in the middle of London. However, as the map does not tell us the specific names of neighbourhoods, we also plotted it on a horizontal bar chart to see the differences more clearly.
 
 ![](Images/neighbourhoodmapfromarticle.png)
-< p align="center"> Source: Crown copyright and database right 2012, Zoopla </p>
+<p align="center"> Source: Crown copyright and database right 2012, Zoopla </p>
 
 ![](Images/neighbourhoodvsmedianprice.png)
 
