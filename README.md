@@ -100,7 +100,7 @@ This dataset contains written comments by guests about their experiences in a pa
 
 Descriptive statistics of reviews.csv:
 
-<img src="Images/Reviews%20statistics.png height="200" >
+<img src="Images/Reviews%20statistics.png" height="200" >
 
 Sample of a negative review: (polarity score < 0):
 
