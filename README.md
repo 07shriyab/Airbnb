@@ -89,7 +89,7 @@ Descriptive statistics of listings.csv (Part 1):
 
 Descriptive statistics of listings.csv (Part 2):
 
-![](Images/Reviews%20listings%20statistics(2).png)
+<img src="Images/Reviews%20listings%20statistics(2).png" height="200" >
 
 
 2. Reviews.csv
@@ -100,7 +100,7 @@ This dataset contains written comments by guests about their experiences in a pa
 
 Descriptive statistics of reviews.csv:
 
-![](Images/Reviews%20statistics.png)
+<img src="Images/Reviews%20statistics.png height="200" >
 
 Sample of a negative review: (polarity score < 0):
 
