@@ -174,7 +174,7 @@ Then, the NaN values were replaced by zeros in the columns. We drop the infreque
 
 For the top amenities, the data was cleaned by removing the NaN values and then the amenities were separated using the numpy concentrate to count the top 20 amenities. Then, we plotted this using matplotlib.
 
-For predicting prices, the process is explained below. The sklearn package was used to calculate each model (Linear Regression, Multiple Regression, Random Forest, KNN and Decision Tree. First, exclude the properties with listed prices of zero values. After, we replaced null values with zero values for “reviews_per month” and “host_listing_count”, and then encoded categorical values as integers.  The dataset was horizontally split into training and test data sets and also split into features (=X_train and X_test) and target (y_train and y_test). 
+For predicting prices, the process is explained below. The sklearn package was used to calculate each model (Linear Regression, Multiple Regression, Random Forest, KNN and Decision Tree. First, exclude the properties with listed prices of zero values. After, we replaced null values with zero values for ``reviews_per month`` and ``host_listing_count``, and then encoded categorical values as integers.  The dataset was horizontally split into training and test data sets and also split into features (=X_train and X_test) and target (y_train and y_test). 
 
 ## Results
 
