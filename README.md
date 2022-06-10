@@ -169,7 +169,7 @@ In some graphs such as that of the minimum number of nights versus price, we ide
 
 In the reviews data, the comments were cleaned and preprocessed  by filtering out the empty comments, removing the unicode characters, changing it to lowercase, removing the windows to new lines, removing all the stop words, and replacing the amount of spaces to one space. Given that all of the comments were in sentences, they were split into words using the word_tokenize in NLTK library. The words were captured using the Count_Vectorizer() and was created as a separate dataframe to explore the amount of times those top 20 words occurred. This will make it easier to create WordCloud of the top words in the ``comments``.
 
-In comparison of the reviews_score_ratings and price, the prices were changed into floats and plotted the graph using matplotlib.
+In comparison of the ``reviews_score_ratings`` and ``price``, the prices were changed into floats and plotted the graph using matplotlib after combining the listings and reviews data to match with each host.
 
 To analyse the names of properties with top 100 cheapest and expensive listings, we selected ``names`` and ``price`` from the listings data. Then, we created 2 dataframes for both the top 100 expensive and cheapest listings, which include the ``names``. After preprocessing the dataframes using the same steps for cleaning the comments with NLTK, then WordCloud was created for both dataframes with the help of matplotlib.
 
